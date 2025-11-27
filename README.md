@@ -1,53 +1,57 @@
-# International Phone Field Package
+# International Phone Field Plus
 
-[![pub package](https://img.shields.io/pub/v/intl_phone_field.svg)](https://pub.dev/packages/intl_phone_field)
-[![CI](https://github.com/vanshg395/intl_phone_field/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/vanshg395/intl_phone_field/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> **✨ This is a maintained fork of [intl_phone_field](https://github.com/vanshg395/intl_phone_field)**
+> The original package is no longer maintained. This fork continues active development and maintenance.
 
 A customised Flutter TextFormField to input international phone number along with country code.
 
 This widget can be used to make customised text field to take phone number input for any country along with an option to choose country code from a dropdown.
 
-## ⚠️ The package is deprecated and this repository is no longer maintained ⚠️
+## 🔧 About This Fork
 
-As of June 2021, I, @marcaureln, have been maintaining this Flutter package initially created by @vanshg395. Regrettably, Vansh has been unresponsive, and I am unable to release new versions (the last release is 6 months old as of writing).
+This repository is a maintained fork of the original `intl_phone_field` package created by [@vanshg395](https://github.com/vanshg395) and later maintained by [@marcaureln](https://github.com/marcaureln). Since the original repository is no longer maintained, we've created this fork to:
 
-Considering this, I recommend users to explore alternatives on [pub.dev](https://pub.dev/) or, if interested, fork this repository for continued support. Life can be hectic, and I wish Vansh is doing well.
+- 🐛 Fix bugs and issues
+- ✨ Add new features
+- 📦 Keep dependencies up to date
+- 🔄 Maintain compatibility with latest Flutter versions
 
-Thank you for your understanding and continued support.
+**Original Repository:** https://github.com/vanshg395/intl_phone_field
 
-<details>
-  <summary>Old Readme</summary>
+We thank the original authors and contributors for their excellent work!
 
 ## Screenshots
 
 <img src="https://github.com/vanshg395/intl_phone_field/blob/master/1.png?raw=true" height="500px"> <img src="https://github.com/vanshg395/intl_phone_field/blob/master/2.png?raw=true" height="500px"> <img src="https://github.com/vanshg395/intl_phone_field/blob/master/3.png?raw=true" height="500px">
 
-## Installing
+## 📦 Installing
 
-To use this package:
-
-Run this command:
-
-```yaml
-flutter pub add intl_phone_field
-```
-
-Or, add the following to your `pubspec.yaml` file:
+Add the following to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  intl_phone_field: ^<latest_version>
-```
-
-Sometimes you may want to use the latest version of the package, instead of a published version. To do that, use the `git` syntax:
-
-```yaml
-dependencies:
-  intl_phone_field:
+  intl_phone_field_plus:
     git:
-      url: git://github.com/vanshg395/intl_phone_field.git
-      ref: master
+      url: https://github.com/Doublefire-Chen/intl_phone_field_plus.git
+      ref: main
+```
+
+Or to use a specific version/tag (once tagged):
+
+```yaml
+dependencies:
+  intl_phone_field_plus:
+    git:
+      url: https://github.com/Doublefire-Chen/intl_phone_field_plus.git
+      ref: v1.0.0  # Replace with desired version tag
+```
+
+Then run:
+
+```bash
+flutter pub get
 ```
 
 ## How to Use
@@ -87,8 +91,12 @@ Comment on Issue or Pull Request, asking @all-contributors to add a contributor:
 
 ## Maintainers
 
-- [Vansh Goel](https://github.com/vanshg395/)
-- [Alex N'Guessan](https://github.com/marcaureln/)
+**Current Maintainer:**
+- [Doublefire Chen](https://github.com/Doublefire-Chen/)
+
+**Original Authors:**
+- [Vansh Goel](https://github.com/vanshg395/) (Original creator)
+- [Alex N'Guessan](https://github.com/marcaureln/) (Previous maintainer)
 
 ## Contributors
 
@@ -123,5 +131,3 @@ Comment on Issue or Pull Request, asking @all-contributors to add a contributor:
 ## LICENSE
 
 This project is licensed under the MIT license. See [LICENSE](LICENSE) for more information.
-
-</details>
