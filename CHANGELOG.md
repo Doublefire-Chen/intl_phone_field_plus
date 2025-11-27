@@ -1,3 +1,15 @@
+## [1.0.3] - 2025-01-27
+
+- **Feature:** Add comprehensive l10n (localization) support for all UI strings
+- Add `PhoneFieldLocalization` class with translations for 21 languages
+- Make `searchText` and `invalidNumberMessage` parameters nullable with automatic localization fallback
+- Supported languages: en, sv, zh, zh_TW, ja, ko, ar, fa, de, fr, es, it, pt_BR, nl, pl, tr, ro, no, sk, sr-Cyrl, sr-Latn, yue
+- Maintain backward compatibility: users can still override with custom text
+
+## [1.0.2] - 2025-01-27
+
+- **Fix:** Correct Swedish translation for China from "Kiinná" to "Kina"
+
 ## [1.0.1] - 2025-01-27
 
 - **Fix:** Use correct Swedish language code 'sv' instead of 'se' (243 occurrences updated)
