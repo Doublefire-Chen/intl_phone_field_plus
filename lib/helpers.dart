@@ -1,4 +1,4 @@
-import 'package:intl_phone_field_plus/countries.dart';
+import 'package:intl_phone_field_continued/countries.dart';
 
 bool isNumeric(String s) => s.isNotEmpty && int.tryParse(s.replaceAll("+", "")) != null;
 

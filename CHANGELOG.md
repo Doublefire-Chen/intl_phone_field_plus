@@ -1,5 +1,6 @@
 ## [1.0.3] - 2025-01-27
 
+- **Breaking:** Package renamed from `intl_phone_field_plus` to `intl_phone_field_continued` for pub.dev publication
 - **Feature:** Add comprehensive l10n (localization) support for all UI strings
 - Add `PhoneFieldLocalization` class with translations for 21 languages
 - Make `searchText` and `invalidNumberMessage` parameters nullable with automatic localization fallback

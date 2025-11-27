@@ -2,9 +2,9 @@ import 'dart:async';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl_phone_field_plus/country_picker_dialog.dart';
-import 'package:intl_phone_field_plus/helpers.dart';
-import 'package:intl_phone_field_plus/phone_field_localization.dart';
+import 'package:intl_phone_field_continued/country_picker_dialog.dart';
+import 'package:intl_phone_field_continued/helpers.dart';
+import 'package:intl_phone_field_continued/phone_field_localization.dart';
 
 import './countries.dart';
 import './phone_number.dart';

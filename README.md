@@ -1,20 +1,21 @@
-# International Phone Field Plus
+# International Phone Field Continued
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![pub package](https://img.shields.io/pub/v/intl_phone_field_continued.svg)](https://pub.dev/packages/intl_phone_field_continued)
 
-> **✨ This is a maintained fork of [intl_phone_field](https://github.com/vanshg395/intl_phone_field)**
-> The original package is no longer maintained. This fork continues active development and maintenance.
+> **✨ This is a continued and actively maintained version of [intl_phone_field](https://github.com/vanshg395/intl_phone_field)**
+> The original package is no longer maintained. This package continues active development and maintenance.
 
 A customised Flutter TextFormField to input international phone number along with country code.
 
 This widget can be used to make customised text field to take phone number input for any country along with an option to choose country code from a dropdown.
 
-## 🔧 About This Fork
+## 🔧 About This Package
 
-This repository is a maintained fork of the original `intl_phone_field` package created by [@vanshg395](https://github.com/vanshg395) and later maintained by [@marcaureln](https://github.com/marcaureln). Since the original repository is no longer maintained, we've created this fork to:
+This is a continued version of the original `intl_phone_field` package created by [@vanshg395](https://github.com/vanshg395) and later maintained by [@marcaureln](https://github.com/marcaureln). Since the original repository is no longer maintained, we've created this continuation to:
 
 - 🐛 Fix bugs and issues
-- ✨ Add new features
+- ✨ Add new features (including comprehensive localization support for 21 languages)
 - 📦 Keep dependencies up to date
 - 🔄 Maintain compatibility with latest Flutter versions
 
@@ -28,24 +29,17 @@ We thank the original authors and contributors for their excellent work!
 
 ## 📦 Installing
 
-Add the following to your `pubspec.yaml` file:
+To use this package, add `intl_phone_field_continued` as a dependency in your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  intl_phone_field_plus:
-    git:
-      url: https://github.com/Doublefire-Chen/intl_phone_field_plus.git
-      ref: main
+  intl_phone_field_continued: ^1.0.3
 ```
 
-Or to use a specific version/tag (once tagged):
+Or install it from the command line:
 
-```yaml
-dependencies:
-  intl_phone_field_plus:
-    git:
-      url: https://github.com/Doublefire-Chen/intl_phone_field_plus.git
-      ref: v1.0.0  # Replace with desired version tag
+```bash
+flutter pub add intl_phone_field_continued
 ```
 
 Then run:

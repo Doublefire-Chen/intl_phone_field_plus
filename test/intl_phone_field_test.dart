@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:intl_phone_field_plus/intl_phone_field.dart';
+import 'package:intl_phone_field_continued/intl_phone_field.dart';
 
 class TestWidget extends StatelessWidget {
   const TestWidget({super.key, required this.phoneNumber, this.countryCode});
