@@ -1,11 +1,9 @@
-library intl_phone_field;
-
 import 'dart:async';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:intl_phone_field/country_picker_dialog.dart';
-import 'package:intl_phone_field/helpers.dart';
+import 'package:intl_phone_field_plus/country_picker_dialog.dart';
+import 'package:intl_phone_field_plus/helpers.dart';
 
 import './countries.dart';
 import './phone_number.dart';
@@ -250,7 +248,7 @@ class IntlPhoneField extends StatefulWidget {
   final TextMagnifierConfiguration? magnifierConfiguration;
 
   const IntlPhoneField({
-    Key? key,
+    super.key,
     this.formFieldKey,
     this.initialCountryCode,
     this.languageCode = 'en',
@@ -296,7 +294,7 @@ class IntlPhoneField extends StatefulWidget {
     this.pickerDialogStyle,
     this.flagsButtonMargin = EdgeInsets.zero,
     this.magnifierConfiguration,
-  }) : super(key: key);
+  });
 
   @override
   State<IntlPhoneField> createState() => _IntlPhoneFieldState();
