@@ -1,3 +1,22 @@
+## [1.0.1] - 2025-01-27
+
+- **Fix:** Use correct Swedish language code 'sv' instead of 'se' (243 occurrences updated)
+- Aligns with ISO 639-1 language code standard
+
+## [1.0.0] - 2025-01-27
+
+- **Fork:** Maintained fork of deprecated intl_phone_field package
+- Update package name to intl_phone_field_plus
+- Upgrade Dart SDK constraint to >=3.0.0 <4.0.0 for Dart 3.x compatibility
+- Update flutter_lints to 6.0.0 and other dependencies
+- Fix all linter warnings (super parameters, code style)
+- Update country naming: Taiwan, Hong Kong, and Macao indicate China affiliation
+- Remove unnecessary library declaration
+
+---
+
+## Previous Versions (from original intl_phone_field)
+
 ## [3.3.0] - Release
 
 - Add `magnifierConfiguration` to customize the magnifier.
