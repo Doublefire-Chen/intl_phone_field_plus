@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:intl_phone_field_plus/country_picker_dialog.dart';
 import 'package:intl_phone_field_plus/helpers.dart';
+import 'package:intl_phone_field_plus/phone_field_localization.dart';
 
 import './countries.dart';
 import './phone_number.dart';
@@ -171,9 +172,11 @@ class IntlPhoneField extends StatefulWidget {
 
   /// The text that describes the search input field.
   ///
+  /// If null, will use localized text based on [languageCode].
+  ///
   /// When the input field is empty and unfocused, the label is displayed on top of the input field (i.e., at the same location on the screen where text may be entered in the input field).
   /// When the input field receives focus (or if the field is non-empty), the label moves above (i.e., vertically adjacent to) the input field.
-  final String searchText;
+  final String? searchText;
 
   /// Position of an icon [leading, trailing]
   final IconPosition dropdownIconPosition;
@@ -202,7 +205,8 @@ class IntlPhoneField extends StatefulWidget {
 
   /// Message to be displayed on autoValidate error
   ///
-  /// Default value is `Invalid Mobile Number`.
+  /// If null, will use localized text based on [languageCode].
+  /// Default value is `Invalid Mobile Number` for English.
   final String? invalidNumberMessage;
 
   /// The color of the cursor.
@@ -276,7 +280,7 @@ class IntlPhoneField extends StatefulWidget {
     this.inputFormatters,
     this.enabled = true,
     this.keyboardAppearance,
-    @Deprecated('Use searchFieldInputDecoration of PickerDialogStyle instead') this.searchText = 'Search country',
+    @Deprecated('Use searchFieldInputDecoration of PickerDialogStyle instead') this.searchText,
     this.dropdownIconPosition = IconPosition.leading,
     this.dropdownIcon = const Icon(Icons.arrow_drop_down),
     this.autofocus = false,
@@ -286,7 +290,7 @@ class IntlPhoneField extends StatefulWidget {
     this.cursorColor,
     this.disableLengthCheck = false,
     this.flagsButtonPadding = EdgeInsets.zero,
-    this.invalidNumberMessage = 'Invalid Mobile Number',
+    this.invalidNumberMessage,
     this.cursorHeight,
     this.cursorRadius = Radius.zero,
     this.cursorWidth = 2.0,
@@ -355,6 +359,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
 
   Future<void> _changeCountry() async {
     filteredCountries = _countryList;
+    final localization = PhoneFieldLocalization.of(widget.languageCode.toLowerCase());
     await showDialog(
       context: context,
       useRootNavigator: false,
@@ -363,7 +368,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
           languageCode: widget.languageCode.toLowerCase(),
           style: widget.pickerDialogStyle,
           filteredCountries: filteredCountries,
-          searchText: widget.searchText,
+          searchText: widget.searchText ?? localization.searchCountry,
           countryList: _countryList,
           selectedCountry: _selectedCountry,
           onCountryChanged: (Country country) {
@@ -379,6 +384,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
 
   @override
   Widget build(BuildContext context) {
+    final localization = PhoneFieldLocalization.of(widget.languageCode.toLowerCase());
     return TextFormField(
       key: widget.formFieldKey,
       initialValue: (widget.controller == null) ? number : null,
@@ -429,7 +435,7 @@ class _IntlPhoneFieldState extends State<IntlPhoneField> {
         if (!widget.disableLengthCheck) {
           return value.length >= _selectedCountry.minLength && value.length <= _selectedCountry.maxLength
               ? null
-              : widget.invalidNumberMessage;
+              : widget.invalidNumberMessage ?? localization.invalidPhoneNumber;
         }
 
         return validatorMessage;
