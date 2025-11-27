@@ -1339,7 +1339,7 @@ const List<Country> countries = [
     name: "China",
     nameTranslations: {
       "sk": "Čína",
-      "sv": "Kiinná",
+      "sv": "Kina",
       "pl": "Chiny",
       "no": "Kina",
       "ja": "中国",
